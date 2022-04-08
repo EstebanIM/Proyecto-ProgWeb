@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 
@@ -19,31 +19,9 @@
 
 <body>
 
-    <div class="mt-0 p-5 bg-info text-white">
-
-
-        <form action="/action_page.php" style="padding-top: 0%;">
-            <form class="was-validated">
-                <div class="row" style="width: 30%; margin-left: 70%;">
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Correo" name="email">
-                    </div>
-                    <div class="col">
-                        <input type="password" class="form-control" placeholder="Contraseña" name="pswd">
-                    </div>
-                </div>
-                <div class="form-check mb-3" style="margin-left: 71%;">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" name="remember">Recordarme
-                    </label>
-                </div>
-                <button type="submit" class="btn btn-primary" style="margin-left: 82%; margin-top: 0%;">Iniciar
-                    Sesion</button>
-            </form>
-        </form>
-
+    <div class="mt-0 p-3 bg-info text-white container-fluid">
         <div>
-            <img src="images/Logo-PetSociety.jpg" alt="Pet society logo" style="max-width:100%;width:7%;height:7%;"
+            <img src="images/Logo-PetSociety.jpg" alt="Pet society logo" style="max-width:100%;width:7%;"
                 class="rounded float-start img-fluid">
         </div>
 
@@ -51,16 +29,60 @@
             <h1 id="titulouno" style="font-size:3vw">Pet Society</h1>
             <h2 id="subtitulo" style="font-size: 1vw;">"El loco Rene".</h2>
 
-
+            <form action="/action_page.php" id="sesion" class="col">
+                <form class="was-validated">
+                    <div class="row" style="width: 30%; margin-left: 70%;">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Correo" name="email">
+                        </div>
+                        <div class="col">
+                            <input type="password" class="form-control" placeholder="Contraseña" name="pswd">
+                        </div>
+                    </div>
+                    <div class="form-check mb-3" style="margin-left: 50%; margin-top: 1px;">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="remember">Recordarme
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="margin-left: 50%;">Iniciar Sesion</button>
+                    <p style="margin-left: 50%; margin-top: 4px;">¿No tienes una cuenta? Crea una!</p>
+                    <button type="submit" class="btn btn-primary" style="margin-left: 50%; margin-bottom: 0%;">Registrarse</button> 
+                </form>
+            </form>
         </div>
-
 
     </div>
 
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="quienessomos.html">Info</a>
+            <a class="navbar-brand" href="">Perfil</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Bandanas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Correas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">Placas</a>
+                    </li>   
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Buscar...">
+                    <button class="btn btn-primary" type="button">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
 
     <!-- Carousel -->
-    <div id="demo" class="carousel slide" data-bs-ride="carousel"
-        style="max-width:100%; width: 40%;height: 10%; margin-left: 28%; margin-top: 3px;">
+    <div id="demo" class="carousel slide" data-bs-ride="carousel" style="max-width:100%; width: 40%; margin-left: 28%; margin-top: 3px;">
 
         <!-- Indicators/dots -->
         <div class="carousel-indicators">
@@ -70,7 +92,7 @@
         </div>
 
         <!-- The slideshow/carousel -->
-        <div class="carousel-inner">
+        <div class="carousel-inner" >
 
             <div class="carousel-item active">
                 <img src="images/mascotas.jpg" alt="mascotas" class="d-block w-100">
@@ -93,6 +115,19 @@
         <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
         </button>
+
+    </div>
+
+    <div class="mt-0 p-3 bg-info text-white container-fluid">
+        <div>
+            <i class="fa-brands fa-facebook-square"></i>
+            facebook.com/PetSociety
+        </div>
+
+        <div>
+            <i class="fa-brands fa-instagram"></i>
+            instagram.com/pet_society_web
+        </div>
     </div>
 
 </body>
