@@ -54,16 +54,15 @@
                     <!-- Modal body -->
                     <div class="modal-body">
 
-                        <form action="/action_page.php" class="was-validated">
+                        <form action="index.html" class="was-validated" method="post">
                             <div class="mb-3 mt-3">
 
                                 <b>
                                     <label for="email" style="color: black;">Correo</label>
                                 </b>
-                                <input type="text" class="form-control" id="email" placeholder="Correo" name="email"
+                                <input type="email" class="form-control" id="email" placeholder="Correo" name="email"
                                     name="email" required>
-                                <div class="valid-feedback">Valid.</div>
-                                <div class="invalid-feedback">El campo no puede estar vacio.</div>
+                                <div class="invalid-feedback">Este campo no puede estar vacio.</div>
                             </div>
                             <div class="mb-3">
                                 <b>
@@ -71,10 +70,9 @@
                                 </b>
                                 <input type="password" class="form-control" id="pwd" placeholder="Contraseña"
                                     name="pswd" required>
-                                <div class="valid-feedback">Valid.</div>
-                                <div class="invalid-feedback">El campo no puede estar vacio.</div>
+                                <div class="invalid-feedback">Este campo no puede estar vacio.</div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Iniciar</button>
+                            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
                         </form>
                     </div>
 
