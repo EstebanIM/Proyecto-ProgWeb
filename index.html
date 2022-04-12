@@ -20,36 +20,75 @@
 <body>
 
     <div class="mt-0 p-3 bg-info text-white container-fluid">
-        <div>
-            <img src="images/Logo-PetSociety.jpg" alt="Pet society logo" style="max-width:100%;width:7%;"
-                class="rounded float-start img-fluid">
+        <div class="row">
+            <div class="col-sm-3">
+                <img src="images/Logo-PetSociety.jpg" alt="Pet society logo" style="max-width:100%;width: 25%;"
+                    class="rounded float-start img-fluid">
+            </div>
+
+            <div class="col-sm-6">
+                <div class="titulo">
+                    <h1 id="titulouno">Pet Society</h1>
+                    <h2 id="subtitulo">"El loco Rene"</h2>
+                </div>
+            </div>
+
+            <div class="col-sm-3" style="text-align: center; margin-top: 32px;">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                    Iniciar Sesion
+                </button>
+            </div>
         </div>
 
-        <div class="titulo">
-            <h1 id="titulouno">Pet Society</h1>
-            <h2 id="subtitulo">"El loco Rene"</h2>
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
 
-            <form action="/action_page.php" id="sesion" class="col">
-                <form class="was-validated">
-                    <div class="row" style="width: 30%; margin-left: 70%;">
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="Correo" name="email">
-                        </div>
-                        <div class="col">
-                            <input type="password" class="form-control" placeholder="Contraseña" name="pswd">
-                        </div>
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title" style="color: black;">Iniciar Sesion</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
-                    <div class="form-check mb-3" style="margin-left: 50%; margin-top: 1px;">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" name="remember">Recordarme
-                        </label>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+
+                        <form action="/action_page.php" class="was-validated">
+                            <div class="mb-3 mt-3">
+
+                                <b>
+                                    <label for="email" style="color: black;">Correo</label>
+                                </b>
+                                <input type="text" class="form-control" id="email" placeholder="Correo" name="email"
+                                    name="email" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">El campo no puede estar vacio.</div>
+                            </div>
+                            <div class="mb-3">
+                                <b>
+                                    <label for="pwd" class="form-label" style="color: black;">Contraseña</label>
+                                </b>
+                                <input type="password" class="form-control" id="pwd" placeholder="Contraseña"
+                                    name="pswd" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">El campo no puede estar vacio.</div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Iniciar</button>
+                        </form>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="margin-left: 50%;">Iniciar Sesion</button>
-                    <p style="margin-left: 50%; margin-top: 4px;">¿No tienes una cuenta? Crea una!</p>
-                    <button type="submit" class="btn btn-primary" style="margin-left: 50%; margin-bottom: 0%;">Registrarse</button> 
-                </form>
-            </form>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+
+                </div>
+            </div>
         </div>
+
+
+    </div>
 
     </div>
 
@@ -70,7 +109,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="javascript:void(0)">Placas</a>
-                    </li>   
+                    </li>
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="text" placeholder="Buscar...">
@@ -82,7 +121,8 @@
 
 
     <!-- Carousel -->
-    <div id="demo" class="carousel slide" data-bs-ride="carousel" style="max-width:100%; width: 40%; margin-left: 28%; margin-top: 3px;">
+    <div id="demo" class="carousel slide" data-bs-ride="carousel"
+        style="max-width:100%; width: 40%; margin-left: 28%; margin-top: 3px;">
 
         <!-- Indicators/dots -->
         <div class="carousel-indicators">
@@ -92,7 +132,7 @@
         </div>
 
         <!-- The slideshow/carousel -->
-        <div class="carousel-inner" >
+        <div class="carousel-inner">
 
             <div class="carousel-item active">
                 <img src="images/mascotas.jpg" alt="mascotas" class="d-block w-100">
@@ -118,18 +158,17 @@
 
     </div>
 
-    <div class="mt-0 p-3 bg-info text-white container-fluid">
-        <div>
-            <i class="fa-brands fa-facebook-square"></i>
-            <a href="https://www.facebook.com/PetSociety"> facebook.com/PetSociety</a>
-        </div>
+        <div class="mt-1 p-5 bg-info text-white rounded">
+            <div>
+                <i class="fa-brands fa-facebook-square"></i>
+                <a href="https://www.facebook.com/PetSociety"> facebook.com/PetSociety</a>
+            </div>
 
-        <div>
-            <i class="fa-brands fa-instagram"></i>
-            <a href="https://www.instagram.com/pet_society_web">instagram.com/pet_society_web</a>
+            <div>
+                <i class="fa-brands fa-instagram"></i>
+                <a href="https://www.instagram.com/pet_society_web">instagram.com/pet_society_web</a>
+            </div>
         </div>
-    </div>
-
 </body>
 
 </html>
