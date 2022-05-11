@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
+
 <body>
     <div class="mt-0 p-3 bg-info text-white container-fluid">
         <div class="row">
@@ -37,19 +39,39 @@
 
         </div>
 
-        <div class="col-sm-4">
-            <form action="index.html" class="was-validated">
-                <div class="row" style="margin-top: 100px;">
-                    <div class="col">
-                        <b>
-                            <label for="email" style="color: black;">Recupera Tu cuenta</label>
-                        </b>
-                        <h1 style="font-size:100% ;">Ingresa tu Correo</h1>
-                        <input type="email" class="form-control" placeholder="email" name="email" required>
-                        <div class="invalid-feedback">El campo no puede estar vacio.</div>
+
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <form action="/action_page.php" class="was-validated">
+                    <div class="mb-3 mt-3">
+                        <label for="uname" class="form-label">Username:</label>
+                        <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname"
+                            required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
                     </div>
-                </div>
+                    <div class="mb-3">
+                        <label for="pwd" class="form-label">Password:</label>
+                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd"
+                            required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="myCheck" name="remember" required>
+                        <label class="form-check-label" for="myCheck">I agree on blabla.</label>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Check this checkbox to continue.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="col-lg-1"></div>
         </div>
+
+
+
 
         <div class="container mt-3" style="text-align:center; padding-left: 24%;">
             <button type="button" class="btn btn-primary">Cancelar</button>
@@ -61,4 +83,5 @@
 
         </div>
 </body>
+
 </html>
