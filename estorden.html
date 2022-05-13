@@ -17,7 +17,7 @@
             var url = "https://ipgeolocation.abstractapi.com/v1/?api_key=" + API_KEY + "&ip_address="
             $("#enviar").click(function () {                $.get(url, function (data) {
                 var msg = "Tu ciudad es " + data.city + ", el envio a tu ciudad sale $3.000"
-                    + " Pesos " + data.currency.currency_name
+                    + " " + data.currency.currency_name
                 $("#categorias").append(msg);
             });
             });
