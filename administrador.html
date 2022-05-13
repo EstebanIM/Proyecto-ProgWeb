@@ -18,33 +18,67 @@
 </head>
 
 <body>
-    <div class="mt-0 p-3 bg-info text-white container-fluid">
+    <div class="mt-0 p-3 text-white container-fluid jumbocolor">
         <div class="row">
-            <div class="col-sm-3">
-                <a href="index.html">
-                    <img src="images/Logo-PetSociety.jpg" alt="Pet society logo" style="max-width:100%;"
-                        class="rounded float-start img-fluid">
-                </a>
-            </div>
-
-            <div class="col-sm-6">
-                <div class="titulo">
-                    <h1 id="titulouno">Pet Society</h1>
-                    <h3 id="subtitulo">"El loco Rene"</h3>
+            <div class="col-lg-4">
+                <div>
+                    <a href="index.html">
+                        <img src="images/Logo-PetSociety.jpg" alt="Pet society logo" style="max-width:100%;"
+                            class="rounded float-start img-fluid">
+                    </a>
                 </div>
             </div>
+
+            <div class="col-lg-4">
+                <div class="titulo">
+                    <h1 id="titulouno">Pet Society</h1>
+                    <h2 id="subtitulo">"El loco Rene"</h2>
+                </div>
+            </div>
+            <div class="col-lg-4"></div>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-sm-3">
-            <div class="btn-group-vertical">
-                <button type="button" class="btn btn-primary">Perfil</button>
-                <button type="button" class="btn btn-primary">Suscipciones</button>
-                <button type="button" class="btn btn-primary">Stock</button>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="quienessomos.html">Quienes somos -</a>
+            <a class="navbar-brand" href="historial.html">Perfil |</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="bandanascompra.html">Bandanas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="correascompra.html">Correas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="placascompra.html">Placas</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Buscar">
+                    <button class="btn btn-primary" type="button"
+                        style="background-color: rgb(62, 110, 199); color: rgb(255, 255, 255);">Buscar</button>
+                </form>
             </div>
         </div>
+    </nav>
 
+    <div class="row container-fluid">
+        <div class="col-lg-3 mt-4" style="padding-left: 2%;">
+            <h3>
+                <i class="fa-regular fa-circle-user"></i>
+                <b>Hola, Administrador!</b>
+            </h3>
+            <div class="btn-group-vertical" style="padding-left: 10%; text-align: center;">
+                <button type="button" class="btn btn-light btn-outline-secondary">Perfil</button>
+                <a href="administrador.html" class="btn btn-light btn-outline-secondary">Suscripciones</a>
+                <a href="adminstock.html" class="btn btn-light btn-outline-secondary">Stock</a>
+            </div>
+        </div>
         <div class="col-sm-6">
             <div class="container mt-3">
                 <h2>Ver suscripcion</h2>
@@ -101,6 +135,7 @@
 
         <div class="col-sm-3">
         </div>
+    </div>
 
 </body>
 
