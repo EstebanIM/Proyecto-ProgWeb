@@ -94,7 +94,7 @@
                     </div>
 
                     <div class="col">
-                        <div class="col">
+                        <div class="col mt-2">
                             <b>
                                 <label for="email" style="color: black;">Nombre</label>
                             </b>
@@ -124,15 +124,15 @@
                                 <b>
                                     <label for="varchar" style="color: black;">Nro. Tarjeta</label>
                                 </b>
-                                <input type="varchar" class="form-control" placeholder="Numero de Tarjeta" name="Nrotarjeta"
-                                    required>
+                                <input type="varchar" class="form-control" placeholder="Numero de Tarjeta"
+                                    name="Nrotarjeta" required>
                                 <div class="invalid-feedback">El campo no puede estar vacio.</div>
                             </div>
                             <div class="col">
                                 <b>
                                     <label for="varchar" style="color: black;">Vencimiento</label>
                                 </b>
-                                <input type="varchar" class="form-control" placeholder="Vencimiento" name="Vencimiento"
+                                <input type="varchar" class="form-control" placeholder="MM/AA" name="Vencimiento"
                                     required>
                                 <div class="invalid-feedback">El campo no puede estar vacio.</div>
                             </div>
@@ -146,7 +146,37 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="btn btn-primary float-end">Suscribirse</button>
+                    <!-- Button to Open the Modal -->
+                    <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#myModal">
+                        Suscribirse
+
+                    </button>
+
+                    <!-- The Modal -->
+                    <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title text-center">Gracias por suscribirte!</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <img src="images/perropulgar.jpg" alt=" perro nashe">
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <a href="index.html" type="button" class="btn btn-danger">Close</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
             </form>
         </div>
 
@@ -154,6 +184,27 @@
 
         </div>
 
+    </div>
+
+    <div class="mt-5 p-3 jumbocolor text-white" style="text-align: left;">
+        <div class="row">
+
+            <div class="col-sm-4">
+                <div style="text-align: left;">
+                    <i class="fa-brands fa-facebook-square"></i>
+                    <button onclick="document.location='https://www.facebook.com/PetSociety'">Nuestro Facebook</button>
+                </div>
+                <br>
+                <div>
+                    <i class="fa-brands fa-instagram"></i>
+                    <button onclick="document.location='https://www.instagram.com/pet_society_web'">Nuestro
+                        Instagram</button>
+                </div>
+            </div>
+
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4"></div>
+        </div>
     </div>
 
 </body>
