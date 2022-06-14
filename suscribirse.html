@@ -19,23 +19,56 @@
 
 <body>
 
-    <div class="mt-0 p-3 bg-info text-white container-fluid">
+    <div class="mt-0 p-3 text-white container-fluid jumbocolor">
         <div class="row">
-            <div class="col-sm-3">
-                <a href="index.html">
-                    <img src="images/Logo-PetSociety.jpg" alt="Pet society logo" style="max-width:100%;"
-                        class="rounded float-start img-fluid">
-                </a>
-            </div>
-
-            <div class="col-sm-6">
-                <div class="titulo">
-                    <h1 id="titulouno">Pet Society</h1>
-                    <h3 id="subtitulo">"El loco Rene"</h3>
+            <div class="col-lg-4">
+                <div>
+                    <a href="index.html">
+                        <img src="images/Logo-PetSociety.jpg" alt="Pet society logo" style="max-width:100%;"
+                            class="rounded float-start img-fluid">
+                    </a>
                 </div>
             </div>
+
+            <div class="col-lg-4">
+                <div class="titulo">
+                    <h1 id="titulouno">Pet Society</h1>
+                    <h2 id="subtitulo">"El loco Rene"</h2>
+                </div>
+            </div>
+            <div class="col-lg-4"></div>
         </div>
     </div>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="quienessomos.html">Quienes somos -</a>
+            <a class="navbar-brand" href="historial.html">Perfil -</a>
+            <a class="navbar-brand" href="suscribirse.html">Suscribirse :D |</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="bandanascompra.html">Bandanas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="correascompra.html">Correas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="placascompra.html">Placas</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="text" placeholder="Buscar">
+                    <button class="btn btn-primary" type="button"
+                        style="background-color: rgb(62, 110, 199); color: rgb(255, 255, 255);">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
     <div class="row">
 
         <div class="col-sm-4">
@@ -61,11 +94,11 @@
                     </div>
 
                     <div class="col">
-                        <div class="container mt-3" style="width: 34vw;">
+                        <div class="col mt-2">
                             <b>
                                 <label for="email" style="color: black;">Nombre</label>
                             </b>
-                            <input type="username" class="form-control" placeholder="Nombre" name="Nombre" required>
+                            <input type="username" class="form-control" placeholder="Apellido" name="Nombre" required>
                             <div class="invalid-feedback">El campo no puede estar vacio.</div>
                         </div>
                         <div class="col">
@@ -86,20 +119,20 @@
                         <div class="invalid-feedback">El campo no puede estar vacio.</div>
                     </div>
                     <div class="mb-3">
-                        <div class="row" style="margin-top: 30px;">
+                        <div class="row" style="margin-top: 10px;">
                             <div class="col">
                                 <b>
-                                    <label for="pwd" class="form-label" style="color: black;">Nro.Tarjeta</label>
+                                    <label for="varchar" style="color: black;">Nro. Tarjeta</label>
                                 </b>
-                                <input type="password" class="form-control" id="pwd" placeholder="Contraseña"
-                                    name="pswd" required>
+                                <input type="varchar" class="form-control" placeholder="Numero de Tarjeta"
+                                    name="Nrotarjeta" required>
                                 <div class="invalid-feedback">El campo no puede estar vacio.</div>
                             </div>
                             <div class="col">
                                 <b>
                                     <label for="varchar" style="color: black;">Vencimiento</label>
                                 </b>
-                                <input type="varchar" class="form-control" placeholder="Vencimiento" name="Vencimiento"
+                                <input type="varchar" class="form-control" placeholder="MM/AA" name="Vencimiento"
                                     required>
                                 <div class="invalid-feedback">El campo no puede estar vacio.</div>
                             </div>
@@ -107,13 +140,43 @@
                                 <b>
                                     <label for="number" style="color: black;">CVV</label>
                                 </b>
-                                <input type="number" class="form-control" placeholder="CVV" name="CVV" required>
+                                <input type="varchar" class="form-control" placeholder="CVV" name="CVV" required>
                                 <div class="invalid-feedback">El campo no puede estar vacio.</div>
                             </div>
                         </div>
                     </div>
 
-                    <button type="submit" class="btn btn-primary float-end">Suscribirse</button>
+                    <!-- Button to Open the Modal -->
+                    <button type="button" class="btn btn-primary float-end" data-bs-toggle="modal" data-bs-target="#myModal">
+                        Suscribirse
+
+                    </button>
+
+                    <!-- The Modal -->
+                    <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title text-center">Gracias por suscribirte!</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <img src="images/perropulgar.jpg" alt=" perro nashe">
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <a href="index.html" type="button" class="btn btn-danger">Close</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
             </form>
         </div>
 
@@ -121,6 +184,27 @@
 
         </div>
 
+    </div>
+
+    <div class="mt-5 p-3 jumbocolor text-white" style="text-align: left;">
+        <div class="row">
+
+            <div class="col-sm-4">
+                <div style="text-align: left;">
+                    <i class="fa-brands fa-facebook-square"></i>
+                    <button onclick="document.location='https://www.facebook.com/PetSociety'">Nuestro Facebook</button>
+                </div>
+                <br>
+                <div>
+                    <i class="fa-brands fa-instagram"></i>
+                    <button onclick="document.location='https://www.instagram.com/pet_society_web'">Nuestro
+                        Instagram</button>
+                </div>
+            </div>
+
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4"></div>
+        </div>
     </div>
 
 </body>
