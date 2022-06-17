@@ -1,0 +1,6 @@
+# utilizar el comando pip install -r requirements.txt
+# django == 3.10.4
+# django da error tengo la version 3.10.4
+pillow
+django-crispy-forms
+crispy-bootstrap5

@@ -1,0 +1,32 @@
+{%extends 'LocoRene/base.html' %}
+
+{% load static %}
+
+{%block contenido %}
+{% load crispy_forms_tags %}
+<div class="row">
+    <div class="col-lg-3 mt-4" style="padding-left: 2%;">
+        <h3>
+            <i class="fa-regular fa-circle-user"></i>
+            <b>Hola, Administrador!</b>
+        </h3>
+        <div class="btn-group-vertical" style="padding-left: 10%; text-align: center;">
+            <button type="button" class="btn btn-light btn-outline-secondary">Perfil</button>
+            <a href="administrador.html" class="btn btn-light btn-outline-secondary">Suscripciones</a>
+            <a href="adminstock.html" class="btn btn-light btn-outline-secondary">Stock</a>
+        </div>
+    </div>
+
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form | crispy}}
+
+        <input type="reset" class="btn btn-secondary" value="limpiar">
+        <input type="submit" class="btn btn-primary" value="Guardar Cambios">
+    </form>
+</div>
+<div class="col-sm-3">
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br>
+{% endblock %}

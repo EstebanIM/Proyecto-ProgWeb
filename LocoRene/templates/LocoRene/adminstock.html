@@ -1,0 +1,87 @@
+{%extends 'LocoRene/base.html' %}
+
+{% load static %}
+
+{%block contenido %}
+{% load crispy_forms_tags %}
+<div class="row">
+    <div class="col-lg-3 mt-4" style="padding-left: 2%;">
+        <h3>
+            <i class="fa-regular fa-circle-user"></i>
+            <b>Hola, Administrador!</b>
+        </h3>
+        <div class="btn-group-vertical" style="padding-left: 10%; text-align: center;">
+            <button type="button" class="btn btn-light btn-outline-secondary">Perfil</button>
+            <a href="administrador.html" class="btn btn-light btn-outline-secondary">Suscripciones</a>
+            <a href="adminstock.html" class="btn btn-light btn-outline-secondary">Stock</a>
+        </div>
+    </div>
+
+    {% load humanize %}
+    <div class="col-sm-6">
+        <div class="container mt-3 text-center">
+            <h2>Stock</h2>
+    
+            <table class="table table-bordered table-sm">
+                <thead>
+                    <tr>
+                        <th>Nombre Producto</th>
+                        <th>En stock</th>
+                        <th>En precio</th>
+                        <th>opciones</th>
+    
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for p in productos %}
+                    <tr>
+                        <td>{{p.nombre | title }}</td>
+                        <td>{{p.stock }}</td>
+                        <td>${{p.precio | intcomma }}</td>
+                        <td>
+
+                            <div class="d-grid gap-2 d-md-block">
+                                <a href="{% url 'modificarproducto' p.id %}" class="btn btn-primary">Modificar</a>
+                                <a href="{% url 'eliminarproducto' p.id %}" class="btn btn-danger">Eliminar</a>
+
+                              </div>
+                        </td>
+    
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="container mt-3" style="text-align:center; padding-left: 42.3%;">
+        <a href="{% url 'publicarproducto' %}" class="btn btn-outline-success" >Publicar</a>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                                {{form | crispy}}
+
+                </div>
+                <div class="modal-footer">
+                    <input type="reset" class="btn btn-secondary" value = "limpiar">
+                    <input type="submit" class="btn btn-primary" value = "Guardar Cambios">
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    {% endblock %}

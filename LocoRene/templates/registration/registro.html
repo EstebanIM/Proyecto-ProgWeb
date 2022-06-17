@@ -1,0 +1,65 @@
+{%extends 'LocoRene/base.html' %}
+
+{% load static %}
+
+{%block contenido %}
+    
+    <div class="row container-fluid">
+
+        <div class="col-sm-4">
+
+        </div>
+
+        <div class="col-sm-4">
+
+            <div class="mt-4" style="text-align: center;">
+                <h3>
+                    <b>
+                        Registra tu nueva cuenta!
+                    </b>
+                </h3>
+            </div>
+            <form action="index.html" class="was-validated">
+                <div class="row" style="margin-top: 50px;">
+                    <div class="col">
+                        <b>
+                            <label for="email" style="color: black;">Nombre</label>
+                        </b>
+                        <input type="username" class="form-control" placeholder="Nombre" name="Nombre" required>
+                        <div class="invalid-feedback">El campo no puede estar vacio.</div>
+                    </div>
+                    <div class="col">
+                        <b>
+                            <label for="email" style="color: black;">Apellido</label>
+                        </b>
+                        <input type="username" class="form-control" placeholder="Apellido" name="Apellido" required>
+                        <div class="invalid-feedback">El campo no puede estar vacio.</div>
+                    </div>
+                </div>
+
+                <div class="mb-3 mt-3">
+                    <b>
+                        <label for="email" style="color: black;">Correo</label>
+                    </b>
+                    <input type="email" class="form-control" id="email" placeholder="Correo" name="email" name="email"
+                        required>
+                    <div class="invalid-feedback">El campo no puede estar vacio.</div>
+                </div>
+                <div class="mb-3">
+                    <b>
+                        <label for="pwd" class="form-label" style="color: black;">Contraseña</label>
+                    </b>
+                    <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="pswd" required>
+                    <div class="invalid-feedback">El campo no puede estar vacio.</div>
+                </div>
+                <button type="submit" class="btn btn-primary float-end">Registrarse</button>
+            </form>
+        </div>
+
+        <div class="col-sm-4">
+
+        </div>
+
+    </div>
+
+{% endblock %}

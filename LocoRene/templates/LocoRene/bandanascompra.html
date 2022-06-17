@@ -1,0 +1,52 @@
+{%extends 'LocoRene/base.html' %}
+
+{% load static %}
+
+{%block contenido %}
+
+
+    <div class="container text-center mt-5">
+        <div class="row">
+    {% load humanize %}
+        {% for producto in productos %}
+            <div class="col-lg-4">
+                {% if producto.imagen %}
+                <img src="{{producto.imagen.url}}" alt="{{ producto.nombre | title }}" style="max-width:60%;margin-top: 10px;">
+                {% endif %}
+                <h5>{{producto.nombre | title }}</h5>
+                <b class="mt-0">${{producto.precio | intcomma }}</b>
+                <h6>Disponibilidad: {{producto.stock }}</h6>
+                <a href="{% url 'Add' producto.id %}" type="button" class="btn btn-success mt-4 text-center">Agregar al carro</a>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+
+
+    {% comment %} <div class="col-lg-4">
+        <img src="images/bandananegra.png" style="max-width:100%;">
+        <h5>Bandana Negra</h5>
+        <b class="mt-0">$4.590CLP</b>
+        <h6>Disponibilidad: 21</h6>
+        <b>Cantidad:</b>
+        <select class="form-select form-select-sm mt-0 center" style="width: 20%;">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+        </select>
+    </div> {% endcomment %}
+    <div class="container mt-3">
+        {% include "Carrito.html" %}
+        </div>
+<br><br><br><br><br>
+{% endblock %}

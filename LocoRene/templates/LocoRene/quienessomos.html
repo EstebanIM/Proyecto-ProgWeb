@@ -1,0 +1,20 @@
+{%extends 'LocoRene/base.html' %}
+
+{% load static %}
+
+{%block contenido %}
+
+    <div>
+        <h1 style=" text-align: center; margin-top: 1%;">¿Quienes Somos?</h1>
+
+        <div style="text-align: center;">
+            <picture>
+                <source media="(min-width: 650px)"
+                    srcset="{% static 'LocoRene/'%}images/El-perro-tiene-celos-del-gato-que-hacer-para-evitar.jpeg">
+                <source media="(min-width: 465px)"
+                    srcset="{% static 'LocoRene/'%}images/El-perro-tiene-celos-del-gato-que-hacer-para-evitar.jpeg">
+                <img src="{% static 'LocoRene/'%}images/El-perro-tiene-celos-del-gato-que-hacer-para-evitar.jpeg">
+            </picture>
+        </div>
+    </div>
+{% endblock %}
