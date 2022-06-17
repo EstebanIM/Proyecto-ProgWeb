@@ -14,7 +14,7 @@
                 </h3>
                 <div class="btn-group-vertical" style="padding-left: 10%; text-align: center;">
                     <a href="{% url 'historial'%}" class="btn btn-light btn-outline-secondary">Mi perfil</a>
-                    <a href="versuscripcion.html" class="btn btn-light btn-outline-secondary">Mi suscripción</a>
+                    <a href="{% url 'versuscripcion' %}" class="btn btn-light btn-outline-secondary">Mi suscripción</a>
                 </div>
             </div>
 
@@ -40,9 +40,6 @@
                             <tr>
                                 <th>Email</th>
                                 <th>Región</th>
-                                <th><button type="submit" class="btn btn-outline-secondary">Editar</button>
-                                    <button type="submit" class="btn btn-outline-secondary">Cerrar Sesión</button>
-                                </th>
 
                             </tr>
                         </thead>

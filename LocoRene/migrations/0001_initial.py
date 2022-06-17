@@ -22,3 +22,15 @@ class Migration(migrations.Migration):
             ],
         ),
     ]
+
+    operations = [
+        migrations.CreateModel(
+            name='Usuario',
+            fields=[
+                ('nombre', models.BigAutoField(max_length=50)),
+                ('apellido', models.CharField(max_length=50)),
+                ('correo', models.IntegerField(max_length=100)),
+                ('password', models.IntegerField(max_length=50)),
+            ],
+        ),
+    ]

@@ -7,6 +7,16 @@ from .forms import ProductoForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 # Create your views here.
+
+def versuscripcion(request):
+    return render(request, 'LocoRene/versuscripcion.html')
+
+def registro(request):
+    return render(request, 'registration/registro.html')
+
+def suscribirse (request):
+    return render (request, 'LocoRene/suscribirse.html')
+
 def home(request):
     return render(request,  'LocoRene/home.html')
 
