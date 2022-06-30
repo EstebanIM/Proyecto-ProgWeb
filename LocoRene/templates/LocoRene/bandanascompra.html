@@ -16,7 +16,7 @@
                 <h5>{{producto.nombre | title }}</h5>
                 <b class="mt-0">${{producto.precio | intcomma }}</b>
                 <h6>Disponibilidad: {{producto.stock }}</h6>
-                <a href="{% url 'Add' producto.id %}" type="button" class="btn btn-success mt-4 text-center">Agregar al carro</a>
+                <a href="{% url 'agregar_producto' producto.id %}" type="button" class="btn btn-success mt-4 text-center">Agregar al carro</a>
             </div>
         {% endfor %}
         </div>

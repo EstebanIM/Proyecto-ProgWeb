@@ -76,26 +76,26 @@ def eliminarproducto(request, id):
     messages.success(request, "Eliminado Correctamente")
     return redirect(to= "stock")
 
-#Carrito de Compra
-
-def agregar_producto(request, producto_id):
+# carrito
+def agregar_pro_car(request, producto_id):
     carrito = Carrito(request)
     producto = Producto.objects.get(id=producto_id)
     carrito.agregar(producto)
     return redirect("bandanascompra")
 
-def eliminar_producto(request, producto_id):
+def eliminar_pro_car(request, producto_id):
     carrito = Carrito(request)
     producto = Producto.objects.get(id=producto_id)
     carrito.eliminar(producto)
+    return redirect("bandanascompra")
 
-def restar_producto(request, producto_id):
+def restar_pro_car(request, producto_id):
     carrito = Carrito(request)
     producto = Producto.objects.get(id=producto_id)
     carrito.restar(producto)
+    return redirect("bandanascompra")
 
-def limpiar_carrito(request):
+def limpiar_pro_car(request):
     carrito = Carrito(request)
     carrito.limpiar()
-
-#fin carrito compra
+    return redirect("bandanascompra")

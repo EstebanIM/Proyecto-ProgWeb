@@ -1,5 +1,7 @@
 from django.urls import path
-from .views import agregar_producto, eliminar_producto, home, historial, limpiar_carrito, publicarproducto, quienessomos, bandanascompra, registro, restar_producto, stock, modificarproducto, eliminarproducto, suscribirse, versuscripcion
+
+from LocoRene.views import agregar_pro_car, bandanascompra, eliminar_pro_car, eliminarproducto, historial, home, limpiar_pro_car, modificarproducto, publicarproducto, quienessomos, registro, restar_pro_car, stock, suscribirse, versuscripcion
+
 
 urlpatterns = [
     path('', home, name="home"),
@@ -13,10 +15,10 @@ urlpatterns = [
     path('publicarproducto',publicarproducto, name="publicarproducto"),
     path('modificarproducto/<id>/',modificarproducto, name="modificarproducto"),
     path('eliminarproducto/<id>/',eliminarproducto, name="eliminarproducto"),
-    path('agregar/<producto_id>/', agregar_producto, name="Add"),
-    path('eliminar/<producto_id>/', eliminar_producto, name="Del"),
-    path('restar/<producto_id>/', restar_producto, name="Sub"),
-    path('limpiar/', limpiar_carrito, name="CLS"),
+    path('agregar/<producto_id>/', agregar_pro_car, name="agregar_producto"),
+    path('eliminar/<producto_id>/', eliminar_pro_car, name="eliminar_producto"),
+    path('restar/<producto_id>/', restar_pro_car, name="Sub"),
+    path('limpiar/', limpiar_pro_car, name="CLS"),
 
 ]
 

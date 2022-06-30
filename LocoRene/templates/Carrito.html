@@ -19,8 +19,8 @@
           <td>{{value.nombre}}</td>
           <td>{{value.precio}}</td>
           <td>{{value.acumulado}}
-            <a href="{% url 'Add' value.producto_id %}" class="badge btn btn-dark badge-dark">+</a>
-            <a href="{% url 'Sub' value.producto_id %}" class="badge btn btn-dark badge-dark">-</a>
+            <a href="{% url 'agregar_producto' value.producto_id %}" class="badge btn btn-dark badge-dark">+</a>
+            <a href="{% url 'eliminar_producto' value.producto_id %}" class="badge btn btn-dark badge-dark">-</a>
           </td>
         </tr>
       {% endfor %}
