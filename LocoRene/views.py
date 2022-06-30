@@ -3,16 +3,37 @@ from django.shortcuts import redirect, render
 
 from LocoRene.Carrito import Carrito
 from .models import Producto
-from .forms import ProductoForm
+from .forms import ProductoForm, CustomUserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.contrib.auth import authenticate, login
+from rest_framework import viewsets
+from .serializers import ProductoSerializer
 # Create your views here.
+
+class ProductoViewSet(viewsets.ModelViewSet):
+    queryset = Producto.objects.all()
+    serializer_class = ProductoSerializer
+
 
 def versuscripcion(request):
     return render(request, 'LocoRene/versuscripcion.html')
 
 def registro(request):
-    return render(request, 'registration/registro.html')
+    data = {
+        'form': CustomUserCreationForm()
+    }
+
+    if request.method == 'POST':
+        formulario = CustomUserCreationForm(data=request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            user = authenticate(username=formulario.cleaned_data["username"], password=formulario.cleaned_data["password1"])
+            login(request, user)
+            messages.success(request, "Registro Exitoso")
+            return redirect(to="home")
+        data["form"] = formulario
+    return render(request, 'registration/registro.html', data)
 
 def suscribirse (request):
     return render (request, 'LocoRene/suscribirse.html')

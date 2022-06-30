@@ -1,7 +1,12 @@
-from django.urls import path
+from django.urls import path, include
 
-from LocoRene.views import agregar_pro_car, bandanascompra, eliminar_pro_car, eliminarproducto, historial, home, limpiar_pro_car, modificarproducto, publicarproducto, quienessomos, registro, restar_pro_car, stock, suscribirse, versuscripcion
+from LocoRene.views import agregar_pro_car, bandanascompra, eliminar_pro_car, eliminarproducto, historial, home, ProductoViewSet, \
+     limpiar_pro_car, modificarproducto, publicarproducto, quienessomos, registro, restar_pro_car, stock, suscribirse, versuscripcion
+     
+from rest_framework import routers
 
+router = routers.DefaultRouter()
+router.register('Producto', ProductoViewSet)
 
 urlpatterns = [
     path('', home, name="home"),
@@ -19,6 +24,7 @@ urlpatterns = [
     path('eliminar/<producto_id>/', eliminar_pro_car, name="eliminar_producto"),
     path('restar/<producto_id>/', restar_pro_car, name="Sub"),
     path('limpiar/', limpiar_pro_car, name="CLS"),
+    path('api/', include (router.urls)),
 
 ]
 
